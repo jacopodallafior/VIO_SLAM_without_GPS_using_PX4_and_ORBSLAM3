@@ -1,0 +1,72 @@
+%YAML:1.0
+
+File.version: "1.0"
+Camera.type: "PinHole"
+
+# Camera intrinsics da /world/.../camera_info (quelli che mi avevi mostrato)
+Camera1.fx: 539.9363327026367
+Camera1.fy: 539.9363708496094
+Camera1.cx: 640.0
+Camera1.cy: 480.0
+
+# Distorsione nulla (camera Gazebo)
+Camera1.k1: 0.0
+Camera1.k2: 0.0
+Camera1.p1: 0.0
+Camera1.p2: 0.0
+
+Camera.width: 1280
+Camera.height: 960
+Camera.newWidth: 640
+Camera.newHeight: 480
+
+# Stream ~30 Hz
+Camera.fps: 30
+
+# Se il tuo Image è rgb8 -> 1. Se è bgr8 -> 0.
+Camera.RGB: 1
+
+# ---------------- IMU <-> Camera extrinsics ----------------
+# IMU frame = body frame (assunto coincidente con base_link).
+# Camera pose in base_link = (0.12, 0.03, 0.242) e rotazione nulla.
+# Quindi T_b_c1 = trasformazione che porta un punto espresso in camera frame nel body/imu frame:
+# p_b = R * p_c + t  con R = I, t = [0.12, 0.03, 0.242]^T
+
+IMU.T_b_c1: !!opencv-matrix
+  rows: 4
+  cols: 4
+  dt: f
+  data: [0.0, 0.0, 1.0, 0.12,
+         -1.0, 0.0, 0.0, 0.03,
+         0.0, -1.0, 0.0, 0.242,
+         0.0, 0.0, 0.0, 1.0]
+
+# ---------------- IMU noise model ----------------
+# In simulazione i valori reali dipendono dal plugin IMU.
+# Questi sono un buon punto di partenza (stile EuRoC, ma freq adattata).
+IMU.NoiseGyro: 8.7e-4
+IMU.NoiseAcc: 6.5e-3
+IMU.GyroWalk: 1.0e-5
+IMU.AccWalk: 1.0e-4
+
+# La tua /fmu/out/sensor_combined è ~100 Hz
+IMU.Frequency: 250.0
+
+# ---------------- ORB params ----------------
+ORBextractor.nFeatures: 2000
+ORBextractor.scaleFactor: 1.2
+ORBextractor.nLevels: 8
+ORBextractor.iniThFAST: 20
+ORBextractor.minThFAST: 7
+
+# ---------------- Viewer ----------------
+Viewer.KeyFrameSize: 0.05
+Viewer.KeyFrameLineWidth: 1.0
+Viewer.GraphLineWidth: 0.9
+Viewer.PointSize: 2.0
+Viewer.CameraSize: 0.08
+Viewer.CameraLineWidth: 3.0
+Viewer.ViewpointX: 0.0
+Viewer.ViewpointY: -1.7
+Viewer.ViewpointZ: 0.8
+Viewer.ViewpointF: 500.0
