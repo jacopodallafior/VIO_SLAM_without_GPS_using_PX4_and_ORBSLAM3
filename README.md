@@ -1,9 +1,9 @@
 # GNSS-Denied PX4 State Estimation with Monocular-Inertial ORB-SLAM3 (ROS 2 + Gazebo)
 This repository contains an end-to-end **simulation** pipeline that runs **ORB-SLAM3** in **IMU_MONOCULAR** mode on a PX4 Gazebo camera/IMU stream and feeds the resulting motion estimate into **PX4 EKF2** as **External Vision** (no GNSS aiding for horizontal navigation).
 
-    **High-level dataflow**
+**High-level dataflow**
 
-    `PX4 SITL + Gazebo sensors → ROS-Gazebo bridge → Python live driver (handshake) → ORB-SLAM3 C++ node → EV bridge (ENU→NED + yaw align + velocity) → PX4 EKF2`
+`PX4 SITL + Gazebo sensors → ROS-Gazebo bridge → Python live driver (handshake) → ORB-SLAM3 C++ node → EV bridge (ENU→NED + yaw align + velocity) → PX4 EKF2`
 
     ---
 
