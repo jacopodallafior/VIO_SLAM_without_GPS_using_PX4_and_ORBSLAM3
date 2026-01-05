@@ -46,13 +46,13 @@ This repository contains an end-to-end **simulation** pipeline that runs **ORB-S
 The plots below compare the aligned VIO output against PX4 local position (origin-aligned for readability).
 
 ### Y vs time
-![Y vs time](media/Figure_1.png)
+![Y vs time](media/Figure_3.png)
 
 ### X vs time
 ![X vs time](media/Figure_2.png)
 
 ### XY trajectory
-![XY trajectory](media/Figure_3.png)
+![XY trajectory](media/Figure_1.png)
 
 ---
 
