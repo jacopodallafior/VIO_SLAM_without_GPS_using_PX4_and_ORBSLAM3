@@ -35,8 +35,12 @@ This repository contains an end-to-end **simulation** pipeline that runs **ORB-S
 ## Demo video
 
 <video width="720" controls>
-  <source src="https://raw.githack.com/jacopodallafior/VIO_SLAM_without_GPS_using_PX4_and_ORBSLAM3/media/demo.mp4" type="video/mp4">
+  <source src="https://raw.githack.com/jacopodallafior/VIO_SLAM_without_GPS_using_PX4_and_ORBSLAM3/main/media/demo.mp4" type="video/mp4">
 </video>
+
+
+
+https://github.com/user-attachments/assets/5d514270-62e3-45b7-aeb8-3c43187363aa
 
 
 
