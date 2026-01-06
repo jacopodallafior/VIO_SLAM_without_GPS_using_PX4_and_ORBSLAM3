@@ -136,7 +136,4 @@ Notes:
 - ORB-SLAM3: Campos et al., *IEEE Transactions on Robotics*, 2021.
 - PX4 External Vision / EKF2 documentation.
 
----
-### License
-Choose a license (e.g., MIT/BSD/Apache-2.0) and add a `LICENSE` file.
-""")
+
